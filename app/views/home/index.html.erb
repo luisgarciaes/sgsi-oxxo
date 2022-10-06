@@ -8,8 +8,74 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-	<a href="/users/sign_up">SIGN UP</a>
-    <a href="/users/sign_up">SIGN IN</a>
-    HOLA
+    <div class="container">
+      <%if !user_signed_in?%>
+        <div>
+          <div class="display-1">Welcome to the OXXO service application</div>
+        </div>
+        <div>
+          <p> <a href="/users/sign_in">Log in</a> to continue</p>
+        </div>
+      <% else %>
+        <div>
+          <div class="display-1">Welcome to the OXXO service application</div>
+          <%= button_to "logout", destroy_user_session_path, method: :delete, class: 'btn btn-link'%>
+        </div>
+      <% end %>
+      <div>
+      </div>
+    </div>
+    <%if user_signed_in?%>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="display-5">Products</div>
+            <div>
+              <ul>
+              <%=link_to 'Add...', products_new_path%>
+                <% Product.all.each do |product| %>
+                  <li><%= product.name%> 
+                  <a><%=link_to 'Edit', products_edit_path(product)%></a>
+                  <a><%=link_to 'Remove', products_edit_path(product)%></a>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="display-5">Costumers</div>
+            <div>
+              <ul>
+              <%=link_to 'Add...', costumers_new_path%>
+                <% Costumer.all.each do |costumer| %>
+                  <li><%= costumer.name%> 
+                  <a><%=link_to 'Edit', costumers_edit_path(costumer)%></a>
+                  <a><%=link_to 'Remove', costumers_edit_path(costumer)%></a>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="display-5">Employees</div>
+            <div>
+              <ul>
+              <%=link_to 'Add...', employees_new_path%>
+                <% Employee.all.each do |employee| %>
+                  <li><%= employee.name%> 
+                  <a><%=link_to 'Edit', employees_edit_path(employee)%></a>
+                  <a><%=link_to 'Remove', employees_edit_path(employee)%></a>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    <%end%>
   </body>
 </html>

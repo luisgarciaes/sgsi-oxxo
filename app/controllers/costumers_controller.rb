@@ -1,5 +1,6 @@
 class CostumersController < ApplicationController
   def index
+    @costumers = Costumer.all
   end
 
   def show
