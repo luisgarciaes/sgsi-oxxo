@@ -9,18 +9,13 @@
   </head>
   <body>
     <div class="container">
+      <div class="display-3">Welcome to the Oxxo service application</div>
       <%if !user_signed_in?%>
         <div>
-          <div class="display-1">Welcome to the OXXO service application</div>
-        </div>
-        <div>
-          <p> <a href="/users/sign_in">Log in</a> to continue</p>
+          <div class="display-6"> <a href="/users/sign_in">Log in</a> to continue</div>
         </div>
       <% else %>
-        <div>
-          <div class="display-1">Welcome to the OXXO service application</div>
           <%= button_to "logout", destroy_user_session_path, method: :delete, class: 'btn btn-link'%>
-        </div>
       <% end %>
       <div>
       </div>
@@ -88,6 +83,7 @@
                 </div>
               <% end %>
             </div>
+            <a href="employees/index">See all...</a>
           </div>
           <div class="col">
             <div class="display-5">Property</div>
@@ -107,6 +103,7 @@
                 </div>
               <% end %>
             </div>
+            <a href="properties/index">See all...</a>
           </div>
         </div>
       </div>

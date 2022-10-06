@@ -10,7 +10,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger d-flex justify-content-center">
-      <a class="navbar-brand bg-white rounded px-1" href="#">
+      <a class="navbar-brand bg-white rounded px-1" href="/">
         <div class="border-white">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Oxxo_Logo.svg/1200px-Oxxo_Logo.svg.png" width="100" class="img-fluid">
         </div>
@@ -18,22 +18,25 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse d-flex  flex-grow-0" id="navbarSupportedContent">
+      <%if user_signed_in?%>
+            <div class="collapse navbar-collapse d-flex  flex-grow-0" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Property</a>
+            <a class="nav-link" href="/properties/index">Property</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Products</a>
+            <a class="nav-link" href="/products/index">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Employees</a>
+            <a class="nav-link" href="/employees/index">Employees</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Costumers</a>
+            <a class="nav-link" href="/costumers/index">Costumers</a>
           </li>
         </ul>
       </div>
+      <%end%>
+
     </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
