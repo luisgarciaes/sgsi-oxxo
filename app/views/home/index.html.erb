@@ -9,7 +9,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="display-3">Welcome to the Oxxo service application</div>
+      <div class="d-flex justify-content-center">
+        <div class="display-6 fw-bold">Welcome to the Oxxo managing application</div>
+      </div>
       <%if !user_signed_in?%>
         <div>
           <div class="display-6"> <a href="/users/sign_in">Log in</a> to continue</div>
@@ -37,7 +39,6 @@
                   </div>
                   <div class="col">
                     <%=button_to 'Remove', product_path(product), method: :delete, class: 'btn btn-link p-0'%>
-
                   </div>
                 </div>
               <% end %>
