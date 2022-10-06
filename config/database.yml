@@ -24,6 +24,8 @@ default: &default
 development:
   <<: *default
   database: sgsi_oxxo_development
+  username: postgres
+  password: perodx00
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +60,8 @@ development:
 test:
   <<: *default
   database: sgsi_oxxo_test
+  username: postgres
+  password: perodx00
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -82,5 +86,5 @@ test:
 production:
   <<: *default
   database: sgsi_oxxo_production
-  username: sgsi_oxxo
-  password: <%= ENV["SGSI_OXXO_DATABASE_PASSWORD"] %>
+  username: postgres
+  password: perodx00
