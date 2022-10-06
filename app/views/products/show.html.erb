@@ -1,5 +1,6 @@
 <div class="container">
   <div class="h1">Product list</div class="h1">
+    <%=link_to 'Add...', new_product_path%>
   <% Product.all.each do |product| %>
     <div class="row">
       <div class="col">

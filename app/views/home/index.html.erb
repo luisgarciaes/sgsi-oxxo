@@ -24,9 +24,11 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <div class="display-5">Products</div>
+            <h3>
+              Products
+              <small class="text-muted">(latest)</small>
+            </h3>
             <div>
-              <%=link_to 'Add...', new_product_path%>
               <% Product.last(5).each do |product| %>
                 <div class="row">
                   <div class="col">
@@ -44,9 +46,11 @@
             <a href="products/index">See all...</a>
           </div>
           <div class="col">
-            <div class="display-5">Costumers</div>
+            <h3>
+              Customer
+              <small class="text-muted">(latest)</small>
+            </h3>
             <div>
-              <%=link_to 'Add...', new_costumer_path%>
               <% Costumer.last(5).each do |costumer| %>
                 <div class="row">
                   <div class="col">
@@ -64,11 +68,13 @@
             <a href="costumers/index">See all...</a>
           </div>
         </div>
-        <div class="row">
+        <div class="row mt-5">
           <div class="col">
-            <div class="display-5">Employees</div>
+            <h3>
+              Employees
+              <small class="text-muted">(latest)</small>
+            </h3>
             <div>
-              <%=link_to 'Add...', new_employee_path%>
               <% Employee.last(5).each do |employee| %>
                 <div class="row">
                   <div class="col">
@@ -86,9 +92,11 @@
             <a href="employees/index">See all...</a>
           </div>
           <div class="col">
-            <div class="display-5">Property</div>
+            <h3>
+              Properties
+              <small class="text-muted">(latest)</small>
+            </h3>
             <div>
-              <%=link_to 'Add...', new_property_path%>
               <% Property.last(5).each do |property| %>
                 <div class="row">
                   <div class="col">

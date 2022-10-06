@@ -1,5 +1,6 @@
 <div class="container">
   <div class="h1">Employee list</div class="h1">
+    <%=link_to 'Add...', new_employee_path%>
   <% Employee.all.each do |employee| %>
     <div class="row">
       <div class="col">

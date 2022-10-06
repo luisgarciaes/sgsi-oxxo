@@ -1,5 +1,6 @@
 <div class="container">
   <div class="h1">Costumer list</div class="h1">
+  <%=link_to 'Add...', new_costumer_path%>
   <% Costumer.all.each do |costumer| %>
     <div class="row">
       <div class="col">
