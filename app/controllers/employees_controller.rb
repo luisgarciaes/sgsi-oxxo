@@ -7,9 +7,21 @@ class EmployeesController < ApplicationController
 
   def show; end
 
-  def new; end
+  def new
+    @employee = Employee.new
+    render :new
+  end
 
-  def create; end
+  def create
+    @employee = Employee.new(params.require(:employee).permit(:name))
+    if @employee.save
+      flash[:success] = "New employee successfully added!"
+      redirect_to root_path
+    else
+      flash.now[:error] = "Employee creation failed"
+      render :new
+    end
+  end
 
   def edit
     @employee = Employee.find(params[:id])

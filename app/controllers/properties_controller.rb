@@ -5,10 +5,21 @@ class PropertiesController < ApplicationController
 
   def show; end
 
-  def new; end
+  def new
+    @property = Property.new
+    render :new
+  end
 
-  def create; end
-
+  def create
+    @property = Property.new(params.require(:property).permit(:name))
+    if @property.save
+      flash[:success] = "New property successfully added!"
+      redirect_to root_path
+    else
+      flash.now[:error] = "Property creation failed"
+      render :new
+    end
+  end
   def edit
     @property = Property.find(params[:id])
     render :edit

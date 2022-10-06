@@ -16,7 +16,7 @@ class CostumersController < ApplicationController
     @costumer = Costumer.new(params.require(:costumer).permit(:name))
     if @costumer.save
       flash[:success] = "New costumer successfully added!"
-      redirect_to todos_url
+      redirect_to root_path
     else
       flash.now[:error] = "Costumer creation failed"
       render :new

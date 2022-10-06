@@ -7,10 +7,21 @@ class ProductsController < ApplicationController
 
   def show; end
 
-  def new; end
+  def new
+    @product = Product.new
+    render :new
+  end
 
-  def create; end
-
+  def create
+    @product = Product.new(params.require(:product).permit(:name))
+    if @product.save
+      flash[:success] = "New product successfully added!"
+      redirect_to root_path
+    else
+      flash.now[:error] = "Product creation failed"
+      render :new
+    end
+  end
   def edit
     @product = Product.find(params[:id])
     render :edit
