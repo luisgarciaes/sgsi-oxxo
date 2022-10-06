@@ -10,14 +10,12 @@
   <body>
     <div class="container">
       <div class="d-flex justify-content-center">
-        <div class="display-6 fw-bold">Welcome to the Oxxo managing application</div>
+        <div class="display-6 fw-bold mb-5">Welcome to the Oxxo managing application</div>
       </div>
       <%if !user_signed_in?%>
         <div>
           <div class="display-6"> <a href="/users/sign_in">Log in</a> to continue</div>
         </div>
-      <% else %>
-        <%= button_to "logout", destroy_user_session_path, method: :delete, class: 'btn btn-link'%>
       <% end %>
       <div>
       </div>
