@@ -6,10 +6,10 @@
         <%= costumer.name%>
       </div>
       <div class="col">
-        <a><%=link_to 'Edit', edit_costumer_path(costumer)%></a>
+        <%=link_to 'Edit', edit_costumer_path(costumer)%>
       </div>
       <div class="col">
-        <a><%=link_to 'Remove', edit_costumer_path(costumer)%></a>
+        <%=button_to 'Remove', costumer_path(costumer), method: :delete, class: 'btn btn-link p-0'%>
       </div>
     </div>
   <% end %>

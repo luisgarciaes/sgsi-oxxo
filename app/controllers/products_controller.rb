@@ -38,8 +38,12 @@ class ProductsController < ApplicationController
     end
   end
 
-  def destroy; end
-
+  def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    flash[:success] = "The product was successfully removed."
+    redirect_to root_path
+  end
   def product_params
     params.permit(:name)
   end

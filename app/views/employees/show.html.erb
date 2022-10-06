@@ -9,7 +9,7 @@
         <a><%=link_to 'Edit', edit_employee_path(employee)%></a>
       </div>
       <div class="col">
-        <a><%=link_to 'Remove', edit_employee_path(employee)%></a>
+        <%=button_to 'Remove', employee_path(employee), method: :delete, class: 'btn btn-link p-0'%>
       </div>
     </div>
   <% end %>

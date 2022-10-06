@@ -39,7 +39,12 @@ class EmployeesController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    @employee = Employee.find(params[:id])
+    @employee.destroy
+    flash[:success] = "The employee was successfully removed."
+    redirect_to root_path
+  end
 
   def employee_params
     params.permit(:name)

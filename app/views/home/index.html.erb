@@ -15,7 +15,7 @@
           <div class="display-6"> <a href="/users/sign_in">Log in</a> to continue</div>
         </div>
       <% else %>
-          <%= button_to "logout", destroy_user_session_path, method: :delete, class: 'btn btn-link'%>
+        <%= button_to "logout", destroy_user_session_path, method: :delete, class: 'btn btn-link'%>
       <% end %>
       <div>
       </div>
@@ -36,7 +36,8 @@
                     <a><%=link_to 'Edit', edit_product_path(product)%></a>
                   </div>
                   <div class="col">
-                    <a><%=link_to 'Remove', edit_product_path(product)%></a>
+                    <%=button_to 'Remove', product_path(product), method: :delete, class: 'btn btn-link p-0'%>
+
                   </div>
                 </div>
               <% end %>
@@ -53,10 +54,10 @@
                     <%= costumer.name%>
                   </div>
                   <div class="col">
-                    <a><%=link_to 'Edit', edit_costumer_path(costumer)%></a>
+                    <%=link_to 'Edit', edit_costumer_path(costumer)%>
                   </div>
                   <div class="col">
-                    <a><%=link_to 'Remove', edit_costumer_path(costumer)%></a>
+                    <%=button_to 'Remove', costumer_path(costumer), method: :delete, class: 'btn btn-link p-0'%>
                   </div>
                 </div>
               <% end %>
@@ -78,7 +79,7 @@
                     <a><%=link_to 'Edit', edit_employee_path(employee)%></a>
                   </div>
                   <div class="col">
-                    <a><%=link_to 'Remove', edit_employee_path(employee)%></a>
+                    <%=button_to 'Remove', employee_path(employee), method: :delete, class: 'btn btn-link p-0'%>
                   </div>
                 </div>
               <% end %>
@@ -98,7 +99,7 @@
                     <a><%=link_to 'Edit', edit_property_path(property)%></a>
                   </div>
                   <div class="col">
-                    <a><%=link_to 'Remove', edit_property_path(property)%></a>
+                    <%=button_to 'Remove', property_path(property), method: :delete, class: 'btn btn-link p-0'%>
                   </div>
                 </div>
               <% end %>

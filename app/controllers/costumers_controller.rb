@@ -39,7 +39,12 @@ class CostumersController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    @costumer = Costumer.find(params[:id])
+    @costumer.destroy
+    flash[:success] = "The costumer was successfully removed."
+    redirect_to root_path
+  end
 
   def costumer_params
     params.permit(:name)
