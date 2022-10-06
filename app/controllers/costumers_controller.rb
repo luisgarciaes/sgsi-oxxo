@@ -11,9 +11,16 @@ class CostumersController < ApplicationController
 
   def create; end
 
-  def edit; end
+  def edit
+    @costumer = Costumer.find(params[:id])
+    render :edit
+  end
 
   def update; end
 
   def destroy; end
+
+  def costumer_params
+    params.require(:appointment).permit(:name)
+  end
 end

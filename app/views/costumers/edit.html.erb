@@ -1,2 +1,5 @@
 <h1>Costumers#edit</h1>
-<p>Find me in app/views/costumers/edit.html.erb</p>
+<%= form_with model: @costumer, url: costumer_path(@costumer), method: :patch, local: true do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<%end%>
