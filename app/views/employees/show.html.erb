@@ -1,2 +1,16 @@
-<h1>Employees#show</h1>
-<p>Find me in app/views/employees/show.html.erb</p>
+<div class="container">
+  <div class="h1">Employee list</div class="h1">
+  <% Employee.all.each do |employee| %>
+    <div class="row">
+      <div class="col">
+        <%= employee.name%>
+      </div>
+      <div class="col">
+        <a><%=link_to 'Edit', edit_employee_path(employee)%></a>
+      </div>
+      <div class="col">
+        <a><%=link_to 'Remove', edit_employee_path(employee)%></a>
+      </div>
+    </div>
+  <% end %>
+</div>

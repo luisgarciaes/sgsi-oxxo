@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="h1">Property list</div class="h1">
+  <% Property.all.each do |property| %>
+    <div class="row">
+      <div class="col">
+        <%= property.name%>
+      </div>
+      <div class="col">
+        <a><%=link_to 'Edit', edit_property_path(property)%></a>
+      </div>
+      <div class="col">
+        <a><%=link_to 'Remove', edit_property_path(property)%></a>
+      </div>
+    </div>
+  <% end %>
+</div>
