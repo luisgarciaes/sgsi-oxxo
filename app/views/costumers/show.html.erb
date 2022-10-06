@@ -1,2 +1,16 @@
-<h1>Costumers#show</h1>
-<p>Find me in app/views/costumers/show.html.erb</p>
+<div class="container">
+  <div class="h1">Costumer list</div class="h1">
+  <% Costumer.all.each do |costumer| %>
+    <div class="row">
+      <div class="col">
+        <%= costumer.name%>
+      </div>
+      <div class="col">
+        <a><%=link_to 'Edit', edit_costumer_path(costumer)%></a>
+      </div>
+      <div class="col">
+        <a><%=link_to 'Remove', edit_costumer_path(costumer)%></a>
+      </div>
+    </div>
+  <% end %>
+</div>
