@@ -31,17 +31,17 @@
           <div class="col">
             <div class="display-5">Products</div>
             <div>
-              <%=link_to 'Add...', products_new_path%>
+              <%=link_to 'Add...', new_product_path%>
               <% Product.last(5).each do |product| %>
                 <div class="row">
                   <div class="col">
                     <%= product.name%>
                   </div>
                   <div class="col">
-                    <a><%=link_to 'Edit', products_edit_path(product)%></a>
+                    <a><%=link_to 'Edit', edit_product_path(product)%></a>
                   </div>
                   <div class="col">
-                    <a><%=link_to 'Remove', products_edit_path(product)%></a>
+                    <a><%=link_to 'Remove', edit_product_path(product)%></a>
                   </div>
                 </div>
               <% end %>
@@ -52,17 +52,17 @@
           <div class="col">
             <div class="display-5">Costumers</div>
             <div>
-              <%=link_to 'Add...', costumers_new_path%>
+              <%=link_to 'Add...', new_costumer_path%>
               <% Costumer.last(5).each do |costumer| %>
                 <div class="row">
                   <div class="col">
                     <%= costumer.name%>
                   </div>
                   <div class="col">
-                    <a><%=link_to 'Edit', costumers_edit_path(costumer)%></a>
+                    <a><%=link_to 'Edit', edit_costumer_path(costumer)%></a>
                   </div>
                   <div class="col">
-                    <a><%=link_to 'Remove', costumers_edit_path(costumer)%></a>
+                    <a><%=link_to 'Remove', edit_costumer_path(costumer)%></a>
                   </div>
                 </div>
               <% end %>
@@ -73,17 +73,38 @@
           <div class="col">
             <div class="display-5">Employees</div>
             <div>
-              <%=link_to 'Add...', employees_new_path%>
+              <%=link_to 'Add...', new_employee_path%>
               <% Employee.last(5).each do |employee| %>
                 <div class="row">
                   <div class="col">
                     <%= employee.name%>
                   </div>
                   <div class="col">
-                    <a><%=link_to 'Edit', employees_edit_path(employee)%></a>
+                    <a><%=link_to 'Edit', edit_employee_path(employee)%></a>
                   </div>
                   <div class="col">
-                    <a><%=link_to 'Remove', employees_edit_path(employee)%></a>
+                    <a><%=link_to 'Remove', edit_employee_path(employee)%></a>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+                <div class="row">
+          <div class="col">
+            <div class="display-5">Property</div>
+            <div>
+              <%=link_to 'Add...', new_property_path%>
+              <% Property.last(5).each do |property| %>
+                <div class="row">
+                  <div class="col">
+                    <%= property.name%>
+                  </div>
+                  <div class="col">
+                    <a><%=link_to 'Edit', edit_property_path(property)%></a>
+                  </div>
+                  <div class="col">
+                    <a><%=link_to 'Remove', edit_property_path(property)%></a>
                   </div>
                 </div>
               <% end %>

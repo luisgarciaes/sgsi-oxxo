@@ -71,6 +71,19 @@ Product.create(name: 'Tart Shells - Savory, 3')
 Product.create(name: 'Berry Brulee')
 Product.create(name: 'Soup - Tomato Mush. Florentine')
 
+Property.create(name:'Fridge')
+Property.create(name:'Microwave')
+Property.create(name:'Ice-making machine')
+Property.create(name:'Cash register')
+Property.create(name:'Barcode scanner')
+Property.create(name:'Computer monitor')
+Property.create(name:'Counter')
+Property.create(name:'Camera')
+Property.create(name:'Scanner')
+Property.create(name:'Freezer')
+
+
+
 User.create(
   email: 'admin@gmail.com',
   password: '123456'
