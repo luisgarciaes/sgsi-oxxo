@@ -7,9 +7,21 @@ class CostumersController < ApplicationController
 
   def show; end
 
-  def new; end
+  def new
+    @costumer = Costumer.new
+    render :new
+  end
 
-  def create; end
+  def create
+    @costumer = Costumer.new(params.require(:costumer).permit(:name))
+    if @costumer.save
+      flash[:success] = "New costumer successfully added!"
+      redirect_to todos_url
+    else
+      flash.now[:error] = "Costumer creation failed"
+      render :new
+    end
+  end
 
   def edit
     @costumer = Costumer.find(params[:id])

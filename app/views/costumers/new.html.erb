@@ -1,2 +1,5 @@
 <h1>Costumers#new</h1>
-<p>Find me in app/views/costumers/new.html.erb</p>
+<%= form_with model: @costumer, url: todos_path, method: :post, local: true do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<%end%>
