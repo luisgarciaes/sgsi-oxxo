@@ -21,6 +21,6 @@ class CostumersController < ApplicationController
   def destroy; end
 
   def costumer_params
-    params.require(:appointment).permit(:name)
+    params.permit(:name)
   end
 end

@@ -11,9 +11,16 @@ class EmployeesController < ApplicationController
 
   def create; end
 
-  def edit; end
+  def edit
+    @employee = Employee.find(params[:id])
+    render :edit
+  end
 
   def update; end
 
   def destroy; end
+
+  def employee_params
+    params.permit(:name)
+  end
 end
