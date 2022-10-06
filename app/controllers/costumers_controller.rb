@@ -16,7 +16,16 @@ class CostumersController < ApplicationController
     render :edit
   end
 
-  def update; end
+  def update
+    @costumer = Costumer.find(params[:id])
+    if @costumer.update(params.require(:costumer).permit(:name))
+      flash[:success] = "Costumer successfully updated"
+      redirect_to root_path
+    else
+      flash.now[:error] = "Costumer update failed"
+      render :edit
+    end
+  end
 
   def destroy; end
 
