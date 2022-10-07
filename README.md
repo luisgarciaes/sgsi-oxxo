@@ -7,6 +7,7 @@ This is the repo for the SGSI CRUD project.
 
   <br />
 Deploy:
+
  * https://sgsi-oxxo.fly.dev/
  
   <br />
