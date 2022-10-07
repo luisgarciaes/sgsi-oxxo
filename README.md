@@ -1,4 +1,6 @@
-# README
+# OXXO CRUD Project
+
+!(https://preview.redd.it/3x7ixf3rosu81.jpg?auto=webp&s=cd494270fda2ad73a703a9c90304223023636acc)
 
 This is the repo for the SGSI CRUD project.
 
