@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the repo for the SGSI CRUD project.
 
-Things you may want to cover:
+Project members:
+Luis Gerardo Garcia Espinoza
+Cesar Dali Macias Padilla
 
-* Ruby version
 
-* System dependencies
+Technologes used:
+ * Rails
+ 
+ * CSS
+ 
+ * HTML5
+ 
+ * Bootstrap
+ 
+Deploy:
+ * https://sgsi-oxxo.fly.dev/
+ 
+Additional details:
 
-* Configuration
+* Ruby 3.1.2
 
-* Database creation
+* Devise
 
-* Database initialization
+* PostgreSQL
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
