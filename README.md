@@ -1,11 +1,15 @@
 
 ![An image of an OXXO](https://preview.redd.it/3x7ixf3rosu81.jpg?auto=webp&s=cd494270fda2ad73a703a9c90304223023636acc)
 # OXXO CRUD Project
-
+<pre>
 
 This is the repo for the SGSI CRUD project.
 
-
+ 
+Deploy:
+ * https://sgsi-oxxo.fly.dev/
+ 
+ 
 
 Project members:
 
@@ -25,11 +29,7 @@ Technologies used:
  * Bootstrap
  
  
- 
-Deploy:
- * https://sgsi-oxxo.fly.dev/
- 
- 
+
  
 Additional details:
 
@@ -38,4 +38,4 @@ Additional details:
 * Devise
 
 * PostgreSQL
-
+</pre>
