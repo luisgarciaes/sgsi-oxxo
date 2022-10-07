@@ -1,16 +1,16 @@
-<div class="container">
+<div class="container mt-5">
   <div class="h1">Employee list</div class="h1">
     <%=link_to 'Add...', new_employee_path%>
   <% Employee.all.each do |employee| %>
-    <div class="row">
+    <div class="row mb-2 pb-2">
       <div class="col">
         <%= employee.name%>
       </div>
       <div class="col">
-        <a><%=link_to 'Edit', edit_employee_path(employee)%></a>
+        <%=link_to 'Edit', edit_employee_path(employee), class: 'btn btn-primary'%>
       </div>
       <div class="col">
-        <%=button_to 'Remove', employee_path(employee), method: :delete, class: 'btn btn-link p-0'%>
+        <%=button_to 'Remove', employee_path(employee), method: :delete, class: 'btn btn-danger'%>
       </div>
     </div>
   <% end %>

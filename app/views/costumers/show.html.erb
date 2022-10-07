@@ -1,16 +1,16 @@
-<div class="container">
-  <div class="h1">Costumer list</div class="h1">
+<div class="container mt-5">
+  <div class="h1">Customer list</div class="h1">
   <%=link_to 'Add...', new_costumer_path%>
   <% Costumer.all.each do |costumer| %>
-    <div class="row">
+    <div class="row mb-2 pb-2">
       <div class="col">
         <%= costumer.name%>
       </div>
       <div class="col">
-        <%=link_to 'Edit', edit_costumer_path(costumer)%>
+        <%=link_to 'Edit', edit_costumer_path(costumer), class: 'btn btn-primary'%>
       </div>
       <div class="col">
-        <%=button_to 'Remove', costumer_path(costumer), method: :delete, class: 'btn btn-link p-0'%>
+        <%=button_to 'Remove', costumer_path(costumer), method: :delete, class: 'btn btn-danger'%>
       </div>
     </div>
   <% end %>

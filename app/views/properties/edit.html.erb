@@ -1,0 +1,11 @@
+<div class="container d-flex justify-content-center flex-column mt-5">
+  <h1 class="d-flex justify-content-center">Edit property</h1>
+  <%= form_with model: @property, url: property_path(@property), method: :patch, local: true do |f|%>
+    <div class="d-flex justify-content-center">
+      <%= f.text_field :name, class:'d-flex form-control mb-3', style: 'max-width:200px;' %>
+    </div>
+    <div class="d-flex justify-content-center">
+      <%= f.submit class:'d-flex btn btn-primary mb-3'%>
+    </div>
+  <%end%>
+</div>
