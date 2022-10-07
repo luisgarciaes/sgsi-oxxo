@@ -10,13 +10,14 @@ Deploy:
 
  * https://sgsi-oxxo.fly.dev/
  
+ 
   <br />
 
 Project members:
 
-Luis Gerardo Garcia Espinoza
+ * Luis Gerardo Garcia Espinoza
 
-Cesar Dali Macias Padilla
+ * Cesar Dali Macias Padilla
 
  <br />
 
