@@ -1,5 +1,11 @@
-<h1>Employees new</h1>
-<%= form_with model: @employee, url: employees_path, method: :post, local: true do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit %>
-<%end%>
+<div class="container d-flex justify-content-center flex-column mt-5">
+  <h1 class="d-flex justify-content-center">New employee</h1>
+  <%= form_with model: @employee, url: employees_path, method: :post, local: true do |f| %>
+    <div class="container d-flex justify-content-center">
+      <%= f.text_field :name , class:'d-flex form-control mb-3', style: 'max-width:200px;'%>
+    </div>
+    <div class="container d-flex justify-content-center">
+      <%= f.submit class:'d-flex btn btn-primary mb-3'%>
+    </div>
+  <%end%>
+</div>
