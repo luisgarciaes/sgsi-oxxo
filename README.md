@@ -2,12 +2,17 @@
 
 This is the repo for the SGSI CRUD project.
 
+
+
 Project members:
+
 Luis Gerardo Garcia Espinoza
+
 Cesar Dali Macias Padilla
 
 
-Technologes used:
+
+Technologies used:
  * Rails
  
  * CSS
@@ -16,8 +21,12 @@ Technologes used:
  
  * Bootstrap
  
+ 
+ 
 Deploy:
  * https://sgsi-oxxo.fly.dev/
+ 
+ 
  
 Additional details:
 
