@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CostumersController < ApplicationController
-  before_action :authenticate_member!
+  before_action :authenticate_user!
   def index
     @costumers = Costumer.all
   end
