@@ -1,24 +1,41 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![An image of an OXXO](https://preview.redd.it/3x7ixf3rosu81.jpg?auto=webp&s=cd494270fda2ad73a703a9c90304223023636acc)
+# OXXO CRUD Project
 
-Things you may want to cover:
 
-* Ruby version
+This is the repo for the SGSI CRUD project.
 
-* System dependencies
+  <br />
+Deploy:
+ * https://sgsi-oxxo.fly.dev/
+ 
+  <br />
 
-* Configuration
+Project members:
 
-* Database creation
+Luis Gerardo Garcia Espinoza
 
-* Database initialization
+Cesar Dali Macias Padilla
 
-* How to run the test suite
+ <br />
 
-* Services (job queues, cache servers, search engines, etc.)
+Technologies used:
+ * Rails
+ 
+ * CSS
+ 
+ * HTML5
+ 
+ * Bootstrap
+ 
+ <br />
 
-* Deployment instructions
+ 
+Additional details:
 
-* ...
+* Ruby 3.1.2
+
+* Devise
+
+* PostgreSQL
+
